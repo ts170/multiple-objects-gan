@@ -106,3 +106,6 @@ venv.bak/
 # models
 models/*
 !models/README.md
+
+# data
+data/MS-COCO/*
