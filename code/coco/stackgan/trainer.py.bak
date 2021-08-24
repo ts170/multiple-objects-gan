@@ -1,4 +1,4 @@
-
+from __future__ import print_function
 from six.moves import range
 from PIL import Image
 
@@ -22,14 +22,8 @@ from miscc.utils import compute_discriminator_loss, compute_generator_loss
 from miscc.utils import compute_transformation_matrix, compute_transformation_matrix_inverse
 from miscc.utils import load_validation_data
 
-# deprecated from Python2
-# ToDo -- cleanup
-#from tensorboard import summary
-#from tensorboard import FileWriter
-
-# new for Python3
-from torch.utils.tensorboard import summary
-from torch.utils.tensorboard import FileWriter
+from tensorboard import summary
+from tensorboard import FileWriter
 
 
 class GANTrainer(object):
@@ -292,7 +286,7 @@ class GANTrainer(object):
 
     def sample(self, datapath, num_samples=25, stage=1, draw_bbox=True, max_objects=3):
         from PIL import Image, ImageDraw, ImageFont
-        import pickle as pickle
+        import cPickle as pickle
         import torchvision
         import torchvision.utils as vutils
         img_dir = cfg.IMG_DIR
