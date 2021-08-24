@@ -22,11 +22,6 @@ from miscc.utils import compute_discriminator_loss, compute_generator_loss
 from miscc.utils import compute_transformation_matrix, compute_transformation_matrix_inverse
 from miscc.utils import load_validation_data
 
-# deprecated from Python2
-# ToDo -- cleanup
-#from tensorboard import summary
-#from tensorboard import FileWriter
-
 # new for Python3
 from torch.utils.tensorboard import summary
 from torch.utils.tensorboard import FileWriter
